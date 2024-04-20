@@ -5,20 +5,20 @@
 class Lc < Formula
   desc "LC (List Cloud) is a multi-cloud attack surface asset enumeration tool."
   homepage "https://wiki.teamssix.com/lc"
-  version "0.0.1"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wgpsec/lc/releases/download/v0.0.1/lc_v0.0.1_darwin_amd64.tar.gz"
-      sha256 "643c28c3081423da0b8057b0654f1bfc11a465cb435797172daa83542496e264"
+      url "https://github.com/wgpsec/lc/releases/download/v1.0.0/lc_v1.0.0_darwin_amd64.tar.gz"
+      sha256 "0734e16adc89899d2e4f52d827ec4457ac21ad34eccd18b907d0c272c26e8736"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wgpsec/lc/releases/download/v0.0.1/lc_v0.0.1_darwin_arm64.tar.gz"
-      sha256 "6e56f2803d6ee2d9e5e3d51de4a1cd49bf489529fb6e13fd166a128caf2209f0"
+      url "https://github.com/wgpsec/lc/releases/download/v1.0.0/lc_v1.0.0_darwin_arm64.tar.gz"
+      sha256 "666580faf9d26d40a608ed84ed35844f6552888add161d3c7cafe2ca1f6c4eb1"
 
       def install
         bin.install "lc"
@@ -28,24 +28,24 @@ class Lc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wgpsec/lc/releases/download/v0.0.1/lc_v0.0.1_linux_amd64.tar.gz"
-      sha256 "1eba8d1b8dfdf96c1934c54bcf4d93e872fbe04945b5f1d9c4902c25b26ca845"
+      url "https://github.com/wgpsec/lc/releases/download/v1.0.0/lc_v1.0.0_linux_amd64.tar.gz"
+      sha256 "1c37a96ab7a480ae594004a978cf159b0e346b939d41017b8a7c83175163d1c5"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/lc/releases/download/v0.0.1/lc_v0.0.1_linux_arm.tar.gz"
-      sha256 "89c4c87f5aad5bf71589e089ba9e328b29087357a909dee1e3c65b6e5aa938eb"
+      url "https://github.com/wgpsec/lc/releases/download/v1.0.0/lc_v1.0.0_linux_arm.tar.gz"
+      sha256 "0f7a1f117c685f3b8048dbd309fa2c4ad76976a2589f25ec34f37c5178ad1fe6"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/lc/releases/download/v0.0.1/lc_v0.0.1_linux_arm64.tar.gz"
-      sha256 "abe8fdd54c0fb6f0c32a63f6f66c904bd42e824fb9584925c1cf3f411994567c"
+      url "https://github.com/wgpsec/lc/releases/download/v1.0.0/lc_v1.0.0_linux_arm64.tar.gz"
+      sha256 "44a1a56b8910250b3b17b7548f92a1b75578e74e769916340efa010e16c6b480"
 
       def install
         bin.install "lc"
