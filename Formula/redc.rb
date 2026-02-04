@@ -5,20 +5,20 @@
 class Redc < Formula
   desc "Redc is Red Team Infrastructure Multi-Cloud Automated Deployment Tool"
   homepage "https://redc.wgpsec.org"
-  version "2.0.0"
+  version "2.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wgpsec/redc/releases/download/v2.0.0/redc_v2.0.0_darwin_amd64.tar.gz"
-      sha256 "5f3711600d19cf1e54b140bd4c69571795fdb8bea4b6e30344431452cdf70fab"
+      url "https://github.com/wgpsec/redc/releases/download/v2.1.0/redc_v2.1.0_darwin_amd64.tar.gz"
+      sha256 "3533283d81b162f455b1eb951fc90b6fe95f8a2a11f22c3031b3de4dc4530f20"
 
       def install
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wgpsec/redc/releases/download/v2.0.0/redc_v2.0.0_darwin_arm64.tar.gz"
-      sha256 "32d8e307ae659853aeae4b23c7870c3f309eda0e763a33edf6bcaf83d283dcb8"
+      url "https://github.com/wgpsec/redc/releases/download/v2.1.0/redc_v2.1.0_darwin_arm64.tar.gz"
+      sha256 "156cc4ba3c651b9315930d3a3b20685a9ba8b532823babdc34f41de894c52940"
 
       def install
         bin.install "redc"
@@ -28,15 +28,15 @@ class Redc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v2.0.0/redc_v2.0.0_linux_amd64.tar.gz"
-      sha256 "a9777a4ccddc0507acdfdecf00d91d319ae26c2ee790640fb2add35ef5dbbff7"
+      url "https://github.com/wgpsec/redc/releases/download/v2.1.0/redc_v2.1.0_linux_amd64.tar.gz"
+      sha256 "439c85709fa3aa8804da377cfdaaa2865b2f21126b762068877a40e96c5fa271"
       def install
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v2.0.0/redc_v2.0.0_linux_arm64.tar.gz"
-      sha256 "880e11de767c1f02ad550cd617a89fc96d9167fe25c14c2fda63c55234a4bf2c"
+      url "https://github.com/wgpsec/redc/releases/download/v2.1.0/redc_v2.1.0_linux_arm64.tar.gz"
+      sha256 "daef7b8d9fb14863b4f6253d7be92b9b93aee0afc210b07bd7b2100610359d7f"
       def install
         bin.install "redc"
       end
