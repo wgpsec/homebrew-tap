@@ -5,22 +5,22 @@
 class Redc < Formula
   desc "Redc is Red Team Infrastructure Multi-Cloud Automated Deployment Tool"
   homepage "https://redc.wgpsec.org"
-  version "2.3.0"
+  version "3.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wgpsec/redc/releases/download/v2.3.0/redc_v2.3.0_darwin_amd64.tar.gz"
-      sha256 "9038b6675455697b4d6a32d84669640af474e2810630a93be15e0b3c188e6453"
+      url "https://github.com/wgpsec/redc/releases/download/v3.0.2/redc_v3.0.2_darwin_amd64.tar.gz"
+      sha256 "8aabba0865ab917ded58014f7839e34cada6f77d80ba32e111d0117a55d5384d"
 
-      def install
+      define_method(:install) do
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wgpsec/redc/releases/download/v2.3.0/redc_v2.3.0_darwin_arm64.tar.gz"
-      sha256 "52cc2d5508d2b618c10508e0cc4ef7f5718316e9df7cef8823111b21eed89cad"
+      url "https://github.com/wgpsec/redc/releases/download/v3.0.2/redc_v3.0.2_darwin_arm64.tar.gz"
+      sha256 "e595e87c1925316aac0d468a8f8c7888c86c31153f3e7fbaae4495e4b185d300"
 
-      def install
+      define_method(:install) do
         bin.install "redc"
       end
     end
@@ -28,16 +28,16 @@ class Redc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v2.3.0/redc_v2.3.0_linux_amd64.tar.gz"
-      sha256 "c4c5d4d0af34f1b39780671d957067cbed0a5f92fdce127b8d030bf78efe586d"
-      def install
+      url "https://github.com/wgpsec/redc/releases/download/v3.0.2/redc_v3.0.2_linux_amd64.tar.gz"
+      sha256 "b9ca743f48d74480be3812769c0febb04da7c9ff147aaccc6ac9f0263c2c3dc6"
+      define_method(:install) do
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v2.3.0/redc_v2.3.0_linux_arm64.tar.gz"
-      sha256 "b3b5928d0d578af147ed88b4be3e9ecda4e193b15936f897d2cefa24c56757fa"
-      def install
+      url "https://github.com/wgpsec/redc/releases/download/v3.0.2/redc_v3.0.2_linux_arm64.tar.gz"
+      sha256 "6a548bb825095f5e4c1304a50128a0b824299e88c6f40375f789b6b6304a0291"
+      define_method(:install) do
         bin.install "redc"
       end
     end
