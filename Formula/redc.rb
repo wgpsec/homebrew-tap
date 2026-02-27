@@ -10,7 +10,7 @@ class Redc < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/wgpsec/redc/releases/download/v3.0.4/redc_v3.0.4_darwin_amd64.tar.gz"
-      sha256 "9a6a40ff4e9764fc823d722110dd3d9b85a0aa0ff2bc777c3cd300ced07e8a7b"
+      sha256 "03b461724fe23cab3bbf6519bbb3f9e1267ab90106a2c18f20f3d1b41e69d65f"
 
       define_method(:install) do
         bin.install "redc"
@@ -18,7 +18,7 @@ class Redc < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/wgpsec/redc/releases/download/v3.0.4/redc_v3.0.4_darwin_arm64.tar.gz"
-      sha256 "a11bb734d2f675f0b5032fb7262bd5954932d06235939bbd26e38d5309549ff0"
+      sha256 "c69e8f48c7810baff543cde4b43b8b6abeb688b57ac1a90a78085a4d70e14359"
 
       define_method(:install) do
         bin.install "redc"
@@ -29,14 +29,14 @@ class Redc < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/wgpsec/redc/releases/download/v3.0.4/redc_v3.0.4_linux_amd64.tar.gz"
-      sha256 "df78cb73890f213d55659f8768e2e69428e798c7be020bd39be7e7d377dfb675"
+      sha256 "0bc494b6ebe4d5a8f3c629fe36852cd4d46f856ab52e007546ac3d06580e96b9"
       define_method(:install) do
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/wgpsec/redc/releases/download/v3.0.4/redc_v3.0.4_linux_arm64.tar.gz"
-      sha256 "f2ea954b607fd841f1a05f542675bec32e2a0c2cf626c2d146ba369f4da5b383"
+      sha256 "b36e261188dc12441164e7287be4661db41766ad2f5ded3a8b6cefbc91f493c4"
       define_method(:install) do
         bin.install "redc"
       end
