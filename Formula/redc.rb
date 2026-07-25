@@ -5,20 +5,20 @@
 class Redc < Formula
   desc "Redc is Red Team Infrastructure Multi-Cloud Automated Deployment Tool"
   homepage "https://redc.wgpsec.org"
-  version "3.3.6"
+  version "3.3.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wgpsec/redc/releases/download/v3.3.6/redc_v3.3.6_darwin_amd64.tar.gz"
-      sha256 "8a2cde78da3fc7b07cbcc7becd5f765adc272adb36f8607609d5013b9d8294db"
+      url "https://github.com/wgpsec/redc/releases/download/v3.3.7/redc_v3.3.7_darwin_amd64.tar.gz"
+      sha256 "dc1bda852d98d433b2f71836dfdedd9242d47f5d7ec378dcf20c5b92eebf206c"
 
       define_method(:install) do
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wgpsec/redc/releases/download/v3.3.6/redc_v3.3.6_darwin_arm64.tar.gz"
-      sha256 "088cbcc0d915889acb916087a7a5dd061c0c87bd45b774864b6ce5025aa545a1"
+      url "https://github.com/wgpsec/redc/releases/download/v3.3.7/redc_v3.3.7_darwin_arm64.tar.gz"
+      sha256 "4ef03752903798b8f977e7e497c99a9905344bd3c28996b32c693c8156b842d7"
 
       define_method(:install) do
         bin.install "redc"
@@ -28,15 +28,15 @@ class Redc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v3.3.6/redc_v3.3.6_linux_amd64.tar.gz"
-      sha256 "2b6fbd51ee8f6beaa113a89211901381a1b1e3cd828b6d8571c6b45a1aa97da1"
+      url "https://github.com/wgpsec/redc/releases/download/v3.3.7/redc_v3.3.7_linux_amd64.tar.gz"
+      sha256 "23e45bd80facfe177ddd1a4ff0d25b5be5e44f083c0dc99f43f2184bb9dffab0"
       define_method(:install) do
         bin.install "redc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wgpsec/redc/releases/download/v3.3.6/redc_v3.3.6_linux_arm64.tar.gz"
-      sha256 "387be6695d9a9000b81ab72a2357fb0bb0f66f29a6c15274e23040539e892854"
+      url "https://github.com/wgpsec/redc/releases/download/v3.3.7/redc_v3.3.7_linux_arm64.tar.gz"
+      sha256 "c11b394dd7afa73d268563b1947fb66875e65619bfb6c3ec36e127d50e787cd3"
       define_method(:install) do
         bin.install "redc"
       end
